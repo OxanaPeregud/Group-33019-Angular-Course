@@ -3,7 +3,7 @@
      fxLayout.sm="column"
      fxLayout.xs="column"
      fxLayoutAlign.gt-md="space-around center"
-     fxLayoutGap="10px"
+     fxLayoutGap="50px"
      fxLayoutGap.xs="0">
   <div fxFlex="20">
     <mat-card *ngIf="pizza">
@@ -15,8 +15,10 @@
       <img mat-card-image src={{pizza.image}} alt={{pizza.name}}>
       <mat-card-content>
         <p>{{pizza.description}}</p>
+        <p>{{pizza.price}}руб.</p>
       </mat-card-content>
       <mat-card-actions>
+        <button mat-button (click)="goBack()">BACK</button>
         <button mat-button>LIKE</button>
         <button mat-button>SHARE</button>
       </mat-card-actions>
